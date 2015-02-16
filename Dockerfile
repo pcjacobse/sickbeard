@@ -9,7 +9,7 @@ ENV HOME /root
 CMD ["/sbin/my_init"]
 
 # Fix a Debianism of the nobody's uid being 65534
-RUN usermod -u 1000 nobody
+RUN usermod -u 99 nobody
 RUN usermod -g 100 nobody
 
 RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse"
